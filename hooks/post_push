@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ "$DOCKER_TAG" = "latest" ]; then
+  docker tag $IMAGE_NAME $DOCKER_REPO:10.1-cudnn7-devel
+  docker push $DOCKER_REPO:10.1-cudnn7-devel
+fi
